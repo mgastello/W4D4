@@ -21,5 +21,14 @@ class Array
         new_arr
     end
 
+    def my_transpose
+        new_arr = Array.new(self.length) { [] }
+        (0...self.length).each do |i|
+            self.each do |row|
+                new_arr[i] << row[i]
+            end
+        end
 
+        new_arr
+    end
 end
