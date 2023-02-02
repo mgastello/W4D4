@@ -32,4 +32,28 @@ describe Array do
             ])
         end
     end
+
+    describe '#stock_picker' do 
+        context 'first number in pair smaller than second' do
+            it 'raises an error when first number is bigger than second number' do
+                expect { self.stock_picker }.to raise_error()
+            end
+
+
+        end
+    end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 end
