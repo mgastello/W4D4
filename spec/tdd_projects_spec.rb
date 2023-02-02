@@ -32,28 +32,24 @@ describe Array do
             ])
         end
     end
+end
 
-    describe '#stock_picker' do 
-        context 'first number in pair smaller than second' do
-            it 'raises an error when first number is bigger than second number' do
-                expect { self.stock_picker }.to raise_error()
-            end
+describe '#stock_picker' do 
 
-
-        end
+arr = [10, 5, 7, 20, 12, 1]
+context 'first number in pair is smaller than second' do
+    it 'day pair must be in chronological order' do
+        expect(stock_picker(arr)).to eq([1, 3])
     end
+end
 
-
-
-
-
-
-
-
-
-
-
-
-
+context 'first number in pair is bigger than second' do
+    it 'day pair is not in chronological order' do
+        expect(stock_picker(arr)).not_to eq([5, 3])
+    end
+end
+# it 'raises error when not given array' do
+#     expect{ stock_picker("hello") }.to raise_error('ArgumentError')
+# end
 
 end

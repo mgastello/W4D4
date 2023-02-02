@@ -32,3 +32,25 @@ class Array
         new_arr
     end
 end
+
+
+def stock_picker(array)
+
+    current_profit = 0
+    pair = [0, 0]
+
+    (0...array.length).each do |i|
+        (i + 1...array.length).each do |j|
+            if array[j] - array[i] > current_profit
+                current_profit = array[j] - array[i]
+                pair = [i, j]
+            end
+
+        end
+    end
+    pair
+end
+
+# p stock_picker('hello')
+# p stock_picker([10, 5, 7, 20, 12, 1])
+# p stock_picker(2)
